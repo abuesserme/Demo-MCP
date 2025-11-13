@@ -4,6 +4,11 @@ from tools.get_account_details import get_account_details_handler
 
 app = FastAPI()
 
+@app.get("/")
+def health_check():
+    """Health check endpoint"""
+    return {"status": "healthy", "service": "demo_mcp_connector"}
+
 @app.get("/search_accounts")
 def search_accounts(q: str, authorization: str = Header(None)):
     return search_accounts_handler(q=q, Authorization=authorization)
