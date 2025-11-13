@@ -1,0 +1,18 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "name": "Summit Capital",
+      "type": "Venture Capital",
+      "location": "New York",
+      "contact": "info@summit-demo.com"
+    },
+    {
+      "id": 2,
+      "name": "NorthBridge Partners",
+      "type": "Private Equity",
+      "location": "Boston",
+      "contact": "team@northbridge-demo.com"
+    }
+  ]
+}

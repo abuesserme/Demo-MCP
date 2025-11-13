@@ -1,0 +1,31 @@
+{
+  "name": "demo_mcp_connector",
+  "version": "1.0.0",
+  "description": "Mini MCP connector demo with mock CRM data.",
+  "server": {
+    "command": "uvicorn",
+    "args": ["app:app", "--port", "8000", "--host", "0.0.0.0"]
+  },
+  "tools": {
+    "search_accounts": {
+      "description": "Search accounts by name.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "q": { "type": "string" }
+        },
+        "required": ["q"]
+      }
+    },
+    "get_account_details": {
+      "description": "Get account details by ID.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "account_id": { "type": "number" }
+        },
+        "required": ["account_id"]
+      }
+    }
+  }
+}
